@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2026-10-09T00:00:00.000Z" agent="ChatGPT" version="26.0.0">
+  <diagram id="L1ARCH" name="Architecture Diagram - L1">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="src" value="Nguồn dữ liệu&#xa;CSV: khách hàng + giao dịch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="180" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="clean" value="Kiểm tra &amp; làm sạch&#xa;Dữ liệu thiếu / trùng / sai định dạng" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="190" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="process" value="Xử lý dữ liệu&#xa;Python + Pandas&#xa;Tính tổng chi tiêu, số lần mua, lần mua gần nhất" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="550" y="245" width="220" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="rules" value="Quy tắc phân khúc&#xa;(xác nhận theo đề bài / giảng viên)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="550" y="430" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="Bảng dữ liệu phân tích&#xa;(CSV / cơ sở dữ liệu)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="840" y="260" width="180" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="ui" value="Giao diện / Dashboard&#xa;Danh sách hồ sơ khách hàng&#xa;Lọc phân khúc &amp; thống kê" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="840" y="420" width="180" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="Nhân viên / Nhà phân tích" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="840" y="590" width="180" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="src" target="clean"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="clean" target="process"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="rules" target="process"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="process" target="db"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e5" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="db" target="ui"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="ui" target="user"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
